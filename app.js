@@ -7,7 +7,7 @@ const errorHandler = require('./middleware/errorHandler');
 const connectDb = require('./config/dbConnection');
 
 connectDb()
-const app = express()
+const app = express() 
 const port = process.env.PORT;  // getting the port from the .env file
 
 app.use(express.json())  // to send responce in json format
