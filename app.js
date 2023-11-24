@@ -1,6 +1,7 @@
 // externa import
 const express = require('express');
 const dotenv = require('dotenv').config();
+const cors = require('cors')
 
 // internal import
 const errorHandler = require('./middleware/errorHandler');
@@ -11,6 +12,7 @@ const app = express()
 const port = process.env.PORT;  // getting the port from the .env file
 
 app.use(express.json())  // to send responce in json format
+app.use(cors())
 
 // Different Routes
 app.use('/api/books', require('./routes/contactRoutes'))  // contact route endpoint, imported all the route actions
