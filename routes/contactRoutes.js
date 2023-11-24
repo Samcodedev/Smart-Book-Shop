@@ -6,7 +6,7 @@ const validation = require('../middleware/validateToken');
 
 
 // function routing
-router.use('/:id').get(getBook2);
+router.route('/:id').get(getBook2);
 router.use(validation)
 router.route('/').get(getBook).post(postBook) // routing to the GET and POST function
 router.route('/:id').put(putBook).delete(deleteBook) // routing to the GET, PUT and DELETE function
